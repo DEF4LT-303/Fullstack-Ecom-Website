@@ -67,7 +67,8 @@ const data = [
     caption: 'Valorant Points'
   },
   {
-    image: 'https://pcstrike.com/wp-content/uploads/2021/03/Steam-Banner.jpg',
+    image:
+      'https://cdn1.codashop.com/S/content/common/images/mno/steam_640x241.png',
     caption: 'Steam Top Ups'
   },
   {
