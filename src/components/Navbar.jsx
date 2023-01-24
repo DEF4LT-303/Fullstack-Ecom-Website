@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 60px;
-  background-color: white;
+  background-color: #ececec;
 `;
 
 const Wrapper = styled.div`
@@ -67,12 +67,12 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input style={{ backgroundColor: 'transparent' }} />
             <Search style={{ color: 'gray', fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Game Shop</Logo>
+          <Logo>MERN E-com site</Logo>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>
