@@ -119,7 +119,7 @@ function Slider() {
             captionStyle={captionStyle}
             radius='5px'
             slideNumber={false}
-            captionPosition='bottom'
+            captionPosition='top'
             automatic={true}
             dots={true}
             pauseIconColor='white'
