@@ -1,4 +1,5 @@
 import { Carousel } from 'react-carousel-minimal';
+import { sliderItems } from '../data';
 
 // const Container = styled.div`
 //   height: 100vh;
@@ -60,24 +61,6 @@ import { Carousel } from 'react-carousel-minimal';
 
 // Example - https://reactjsexample.com/easy-to-use-responsive-and-customizable-carousel-component-for-react/
 
-const data = [
-  {
-    image:
-      'https://preview.redd.it/lt5k78uzssk41.png?width=1500&format=png&auto=webp&s=3fc3ffae42bbf74e63377df0f1bd832cb9eeebbf',
-    caption: 'Valorant Points'
-  },
-  {
-    image:
-      'https://cdn1.codashop.com/S/content/common/images/mno/steam_640x241.png',
-    caption: 'Steam Top Ups'
-  },
-  {
-    image:
-      'https://mir-s3-cdn-cf.behance.net/project_modules/1400/28b78d108045493.5fb515fe155ae.jpg',
-    caption: 'Genshin Impact Top Ups'
-  }
-];
-
 const captionStyle = {
   fontSize: '2em',
   fontWeight: 'bold'
@@ -113,7 +96,7 @@ function Slider() {
           }}
         >
           <Carousel
-            data={data}
+            data={sliderItems}
             time={5000}
             width='auto'
             height='500px'

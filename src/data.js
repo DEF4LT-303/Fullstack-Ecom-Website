@@ -1,32 +1,26 @@
 export const sliderItems = [
   {
-    id: 1,
-    img: 'https://i.ibb.co/XsdmR2c/1.png',
-    title: 'SUMMER SALE',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'f5fafd'
+    image:
+      'https://preview.redd.it/lt5k78uzssk41.png?width=1500&format=png&auto=webp&s=3fc3ffae42bbf74e63377df0f1bd832cb9eeebbf',
+    caption: 'Valorant Points'
   },
   {
-    id: 2,
-    img: 'https://i.ibb.co/DG69bQ4/2.png',
-    title: 'AUTUMN COLLECTION',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'fcf1ed'
+    image:
+      'https://cdn1.codashop.com/S/content/common/images/mno/steam_640x241.png',
+    caption: 'Steam Top Ups'
   },
   {
-    id: 3,
-    img: 'https://i.ibb.co/cXFnLLV/3.png',
-    title: 'LOUNGEWEAR LOVE',
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: 'fbf0f4'
+    image:
+      'https://mir-s3-cdn-cf.behance.net/project_modules/1400/28b78d108045493.5fb515fe155ae.jpg',
+    caption: 'Genshin Impact Top Ups'
   }
 ];
 
 export const categories = [
   {
     id: 1,
-    img: 'https://assets2.rockpapershotgun.com/genshin-impact-3-0-key-art.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/genshin-impact-3-0-key-art.jpg',
-    title: 'GENSIN TOP UPS'
+    img: 'https://www.spieltimes.com/wp-content/uploads/2022/01/Genshin-Primogem-Budgeting-Guide.jpg',
+    title: 'GENSHIN TOP UPS'
   },
   {
     id: 2,
@@ -47,7 +41,7 @@ export const popularProducts = [
   },
   {
     id: 2,
-    img: 'https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388'
+    img: 'https://www.freepnglogos.com/uploads/katana-png/katana-png-images-are-download-crazypngm-crazy-png-images-download-8.png'
   },
   {
     id: 3,

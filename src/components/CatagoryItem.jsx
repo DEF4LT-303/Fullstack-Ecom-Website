@@ -2,18 +2,21 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   flex: 1;
-  margin: 3px;
+  margin: 6px;
   height: 70vh;
   position: relative;
-  /* opacity: 0.7;
   &:hover {
-    opacity: 1;
-  } */
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+  }
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid black;
+  opacity: 0.8;
 `;
 const Info = styled.div`
   position: absolute;
@@ -29,6 +32,8 @@ const Info = styled.div`
 const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
+  border-bottom: 3px solid black;
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 `;
 
 const Button = styled.button`
