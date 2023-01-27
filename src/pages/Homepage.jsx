@@ -5,6 +5,7 @@ import Catagories from '../components/Catagories';
 import Navbar from '../components/Navbar';
 import Products from '../components/Products';
 import Slider from '../components/Slider';
+import { mobile } from '../responsive';
 
 const DivTitles = styled.h1`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
@@ -13,6 +14,7 @@ const DivTitles = styled.h1`
   text-align: center;
   margin-top: 70px;
   font-family: 'Roboto', sans-serif;
+  ${mobile({ fontSize: '2rem' })}
 `;
 
 const Home = () => {

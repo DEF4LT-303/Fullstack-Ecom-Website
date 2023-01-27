@@ -1,5 +1,7 @@
 import { Carousel } from 'react-carousel-minimal';
+import styled from 'styled-components';
 import { sliderItems } from '../data';
+import { mobile } from '../responsive';
 
 // const Container = styled.div`
 //   height: 100vh;
@@ -65,6 +67,11 @@ const captionStyle = {
   fontSize: '2em',
   fontWeight: 'bold'
 };
+
+const Container = styled.div`
+  ${mobile({ display: 'none' })}
+`;
+
 function Slider() {
   return (
     // <Container>
@@ -88,7 +95,7 @@ function Slider() {
     //   </Arrow>
     // </Container>
 
-    <div>
+    <Container>
       <div style={{ textAlign: 'center' }}>
         <div
           style={{
@@ -120,7 +127,7 @@ function Slider() {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
