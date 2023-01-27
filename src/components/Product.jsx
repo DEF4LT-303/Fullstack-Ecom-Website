@@ -109,7 +109,13 @@ const Product = ({ item }) => {
 
     <CustomizedCard sx={{ backgroundColor: '#F3F3F3' }}>
       <CardActionArea>
-        <CardMedia component='img' height='180' image={item.img} alt='Image' />
+        <CardMedia
+          component='img'
+          height='250'
+          objectFit='fit'
+          image={item.img}
+          alt='Image'
+        />
 
         <CardContent>
           <Info>
