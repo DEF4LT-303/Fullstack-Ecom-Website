@@ -37,34 +37,50 @@ export const categories = [
 export const popularProducts = [
   {
     id: 1,
-    img: 'https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png'
+    img: 'https://resources.tidal.com/images/40ebd205/803e/4082/b300/fc462c0cf90d/750x750.jpg',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 2,
-    img: 'https://www.freepnglogos.com/uploads/katana-png/katana-png-images-are-download-crazypngm-crazy-png-images-download-8.png'
+    img: 'https://www.freepnglogos.com/uploads/katana-png/katana-png-images-are-download-crazypngm-crazy-png-images-download-8.png',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 3,
-    img: 'https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png'
+    img: 'https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 4,
-    img: 'https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png'
+    img: 'https://i.ytimg.com/vi/H2LaRCieieM/maxresdefault.jpg',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 5,
-    img: 'https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png'
+    img: 'https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 6,
-    img: 'https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png'
+    img: 'https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 7,
-    img: 'https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png'
+    img: 'https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/4/28/bjoyslzjb3uxqyg82uz2/minecraft',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   },
   {
     id: 8,
-    img: 'https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png'
+    img: 'https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png',
+    title: 'Valorant Points',
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
   }
 ];

@@ -1,9 +1,15 @@
+import styled from 'styled-components';
+
 import {
   FavoriteBorderOutlined,
   SearchOutlined,
   ShoppingCartOutlined
 } from '@material-ui/icons';
-import styled from 'styled-components';
+import { CardActionArea } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 
 const Info = styled.div`
   opacity: 0;
@@ -66,23 +72,66 @@ const IconContainer = styled.div`
   }
 `;
 
+const CustomizedCard = styled(Card)`
+  flex: 1;
+  margin: 5px;
+  min-width: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  &:hover {
+    ${Info} {
+      opacity: 1;
+    }
+  }
+`;
+
 const Product = ({ item }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={item.img} />
-      <Info>
-        <IconContainer>
-          <ShoppingCartOutlined />
-        </IconContainer>
-        <IconContainer>
-          <SearchOutlined />
-        </IconContainer>
-        <IconContainer>
-          <FavoriteBorderOutlined />
-        </IconContainer>
-      </Info>
-    </Container>
+    // <Container>
+    //   <Circle />
+    //   <Image src={item.img} />
+    //   <Info>
+    //     <IconContainer>
+    //       <ShoppingCartOutlined />
+    //     </IconContainer>
+    //     <IconContainer>
+    //       <SearchOutlined />
+    //     </IconContainer>
+    //     <IconContainer>
+    //       <FavoriteBorderOutlined />
+    //     </IconContainer>
+    //   </Info>
+    // </Container>
+
+    <CustomizedCard sx={{ backgroundColor: '#F3F3F3' }}>
+      <CardActionArea>
+        <CardMedia component='img' height='180' image={item.img} alt='Image' />
+
+        <CardContent>
+          <Info>
+            <IconContainer>
+              <ShoppingCartOutlined />
+            </IconContainer>
+            <IconContainer>
+              <SearchOutlined />
+            </IconContainer>
+            <IconContainer>
+              <FavoriteBorderOutlined />
+            </IconContainer>
+          </Info>
+          <Typography gutterBottom variant='h5' component='div'>
+            {item.title}
+          </Typography>
+          <Typography variant='body2' color='text.secondary'>
+            {item.desc}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </CustomizedCard>
   );
 };
 
