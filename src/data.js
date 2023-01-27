@@ -43,44 +43,44 @@ export const popularProducts = [
   },
   {
     id: 2,
-    img: 'https://www.freepnglogos.com/uploads/katana-png/katana-png-images-are-download-crazypngm-crazy-png-images-download-8.png',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    img: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1674441703',
+    title: 'Elden Ring',
+    desc: 'Hardcore RPG game with a lot of lore and secrets!'
   },
   {
     id: 3,
-    img: 'https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    img: 'https://win.gg/wp-content/uploads/2023/01/Escape-from-Tarkov-header.jpg',
+    title: 'Escape From Tarkov',
+    desc: 'Realistic FPS game with a lot of guns and gear!'
   },
   {
     id: 4,
     img: 'https://i.ytimg.com/vi/H2LaRCieieM/maxresdefault.jpg',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    title: 'Welkin Moon',
+    desc: '30 days of premium membership for Welkin Moon!'
   },
   {
     id: 5,
-    img: 'https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    img: 'https://cdn.akamai.steamstatic.com/steam/apps/739630/capsule_616x353.jpg?t=1674232976',
+    title: 'Phasmophobia',
+    desc: 'Horror game with a lot of jump scares!'
   },
   {
     id: 6,
-    img: 'https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    img: 'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw2/meta-images/reveal/mw2-reveal-meta-share.jpg',
+    title: 'Call of Duty: MW 2',
+    desc: 'Classic FPS game with a lot of nostalgia!'
   },
   {
     id: 7,
     img: 'https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/4/28/bjoyslzjb3uxqyg82uz2/minecraft',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    title: 'Minecraft',
+    desc: 'Blocky sandbox game with endless possibilities!'
   },
   {
     id: 8,
-    img: 'https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png',
-    title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    img: 'https://cdn.akamai.steamstatic.com/steam/apps/814380/header.jpg?t=1669076148',
+    title: 'Sekiro',
+    desc: 'Hardcore action game with a lot of blood and gore!'
   }
 ];

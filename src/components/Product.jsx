@@ -26,35 +26,35 @@ const Info = styled.div`
   transition: all 0.5s ease;
 `;
 
-const Container = styled.div`
-  flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5fbfd;
-  position: relative;
-  &:hover {
-    ${Info} {
-      opacity: 1;
-    }
-  }
-`;
+// const Container = styled.div`
+//   flex: 1;
+//   margin: 5px;
+//   min-width: 280px;
+//   height: 350px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #f5fbfd;
+//   position: relative;
+//   &:hover {
+//     ${Info} {
+//       opacity: 1;
+//     }
+//   }
+// `;
 
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
+// const Circle = styled.div`
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 50%;
+//   background-color: white;
+//   position: absolute;
+// `;
 
-const Image = styled.img`
-  height: 75%;
-  z-index: 2;
-`;
+// const Image = styled.img`
+//   height: 75%;
+//   z-index: 2;
+// `;
 
 const IconContainer = styled.div`
   width: 40px;
@@ -109,7 +109,13 @@ const Product = ({ item }) => {
 
     <CustomizedCard sx={{ backgroundColor: '#F3F3F3' }}>
       <CardActionArea>
-        <CardMedia component='img' height='180' image={item.img} alt='Image' />
+        <CardMedia
+          component='img'
+          height='250'
+          objectFit='fit'
+          image={item.img}
+          alt='Image'
+        />
 
         <CardContent>
           <Info>
