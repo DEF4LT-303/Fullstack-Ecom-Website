@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Catagories from '../components/Catagories';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Products from '../components/Products';
 import Slider from '../components/Slider';
@@ -27,6 +28,7 @@ const Home = () => {
       <Catagories />
       <DivTitles>Best Sellers</DivTitles>
       <Products />
+      <Footer />
     </div>
   );
 };
