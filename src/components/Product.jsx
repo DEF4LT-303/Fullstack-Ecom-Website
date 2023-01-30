@@ -145,14 +145,14 @@ const Product = ({ item }) => {
             variant='body2'
             color='text.secondary'
             sx={{
-              paddingBottom: '2px',
+              minHeight: '50px',
               textOverflow: 'ellipsis',
               overflow: 'hidden'
             }}
           >
             {item.desc}
           </Typography>
-          <Typography variant='body1' color='primary'>
+          <Typography variant='small' color='primary'>
             TK. {item.price}
           </Typography>
         </CardContent>
