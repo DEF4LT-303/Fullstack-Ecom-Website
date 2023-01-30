@@ -39,48 +39,56 @@ export const popularProducts = [
     id: 1,
     img: 'https://resources.tidal.com/images/40ebd205/803e/4082/b300/fc462c0cf90d/750x750.jpg',
     title: 'Valorant Points',
-    desc: 'Buy Valorant Points to unlock new skins, agents, and more!'
+    desc: 'Buy Valorant Points to unlock new skins, agents, and more!',
+    price: 1200
   },
   {
     id: 2,
     img: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1674441703',
     title: 'Elden Ring',
-    desc: 'Hardcore RPG game with a lot of lore and secrets!'
+    desc: 'Hardcore RPG game with a lot of lore and secrets!',
+    price: 6000
   },
   {
     id: 3,
     img: 'https://win.gg/wp-content/uploads/2023/01/Escape-from-Tarkov-header.jpg',
     title: 'Escape From Tarkov',
-    desc: 'Realistic FPS game with a lot of guns and gear!'
+    desc: 'Realistic FPS game with a lot of guns and gear!',
+    price: 4000
   },
   {
     id: 4,
     img: 'https://i.ytimg.com/vi/H2LaRCieieM/maxresdefault.jpg',
     title: 'Welkin Moon',
-    desc: '30 days of premium membership for Welkin Moon!'
+    desc: '30 days of premium membership for Welkin Moon!',
+    price: 500
   },
   {
     id: 5,
     img: 'https://cdn.akamai.steamstatic.com/steam/apps/739630/capsule_616x353.jpg?t=1674232976',
     title: 'Phasmophobia',
-    desc: 'Horror game with a lot of jump scares!'
+    desc: 'Horror game with a lot of jump scares!',
+    price: 1400
   },
   {
     id: 6,
     img: 'https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw2/meta-images/reveal/mw2-reveal-meta-share.jpg',
-    title: 'Call of Duty: MW 2',
-    desc: 'Classic FPS game with a lot of nostalgia!'
+    title: 'Call of Duty: Modern Warfare 2',
+    desc: 'Classic FPS game with a lot of nostalgia!',
+    price: 6000
   },
   {
     id: 7,
     img: 'https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/4/28/bjoyslzjb3uxqyg82uz2/minecraft',
     title: 'Minecraft',
-    desc: 'Blocky sandbox game with endless possibilities!'
+    desc: 'Blocky sandbox game with endless possibilities!',
+    price: 2000
   },
   {
     id: 8,
     img: 'https://cdn.akamai.steamstatic.com/steam/apps/814380/header.jpg?t=1669076148',
-    title: 'Sekiro',
-    desc: 'Hardcore action game with a lot of blood and gore!'
+    title: 'Sekiro: Shadows Die Twice',
+    desc: 'Hardcore action game with a lot of blood and gore!',
+    price: 2400
   }
 ];

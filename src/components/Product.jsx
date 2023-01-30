@@ -111,7 +111,7 @@ const Product = ({ item }) => {
       <CardActionArea>
         <CardMedia
           component='img'
-          height='250'
+          height='200'
           objectFit='fit'
           image={item.img}
           alt='Image'
@@ -129,11 +129,31 @@ const Product = ({ item }) => {
               <FavoriteBorderOutlined />
             </IconContainer>
           </Info>
-          <Typography gutterBottom variant='h5' component='div'>
+          <Typography
+            gutterBottom
+            variant='h5'
+            component='div'
+            sx={{
+              minHeight: '70px',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden'
+            }}
+          >
             {item.title}
           </Typography>
-          <Typography variant='body2' color='text.secondary'>
+          <Typography
+            variant='body2'
+            color='text.secondary'
+            sx={{
+              minHeight: '50px',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden'
+            }}
+          >
             {item.desc}
+          </Typography>
+          <Typography variant='small' color='primary'>
+            TK. {item.price}
           </Typography>
         </CardContent>
       </CardActionArea>
