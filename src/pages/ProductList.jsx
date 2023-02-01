@@ -24,7 +24,14 @@ const FilterText = styled.span`
   font-weight: 600;
 `;
 
-const Select = styled.select``;
+const Select = styled.select`
+  padding: 10px;
+  margin-left: 10px;
+`;
+
+const Option = styled.option`
+  padding: 20px;
+`;
 
 function ProductList() {
   return (
@@ -36,22 +43,22 @@ function ProductList() {
         <Filter>
           <FilterText>Filter Content:</FilterText>
           <Select>
-            <option disabled selected>
+            <Option disabled selected>
               Type
-            </option>
-            <option>Gift Cards</option>
-            <option>Games</option>
-            <option>Subscriptions</option>
+            </Option>
+            <Option>Gift Cards</Option>
+            <Option>Games</Option>
+            <Option>Subscriptions</Option>
           </Select>
         </Filter>
         <Filter>
           <FilterText>Sort Content:</FilterText>
           <Select>
-            <option disabled selected>
+            <Option disabled selected>
               Price
-            </option>
-            <option>High - Low</option>
-            <option>Low - High</option>
+            </Option>
+            <Option>High - Low</Option>
+            <Option>Low - High</Option>
           </Select>
         </Filter>
       </FilterContainer>
