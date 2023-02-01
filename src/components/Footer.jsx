@@ -113,7 +113,7 @@ function Footer() {
           <ListItem>My Account</ListItem>
           <ListItem>Cart</ListItem>
           <ListItem>Wishlist</ListItem>
-          <ListItem>Order History</ListItem>
+          <ListItem>Products</ListItem>
           <ListItem>Terms</ListItem>
         </List>
       </Center>
