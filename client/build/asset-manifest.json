@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/Fullstack-Ecom-Website/static/js/main.ba91925f.chunk.js",
+    "main.js.map": "/Fullstack-Ecom-Website/static/js/main.ba91925f.chunk.js.map",
+    "runtime-main.js": "/Fullstack-Ecom-Website/static/js/runtime-main.cd98030e.js",
+    "runtime-main.js.map": "/Fullstack-Ecom-Website/static/js/runtime-main.cd98030e.js.map",
+    "static/css/2.49f40008.chunk.css": "/Fullstack-Ecom-Website/static/css/2.49f40008.chunk.css",
+    "static/js/2.bf2f8b58.chunk.js": "/Fullstack-Ecom-Website/static/js/2.bf2f8b58.chunk.js",
+    "static/js/2.bf2f8b58.chunk.js.map": "/Fullstack-Ecom-Website/static/js/2.bf2f8b58.chunk.js.map",
+    "index.html": "/Fullstack-Ecom-Website/index.html",
+    "static/css/2.49f40008.chunk.css.map": "/Fullstack-Ecom-Website/static/css/2.49f40008.chunk.css.map",
+    "static/js/2.bf2f8b58.chunk.js.LICENSE.txt": "/Fullstack-Ecom-Website/static/js/2.bf2f8b58.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd98030e.js",
+    "static/css/2.49f40008.chunk.css",
+    "static/js/2.bf2f8b58.chunk.js",
+    "static/js/main.ba91925f.chunk.js"
+  ]
+}
