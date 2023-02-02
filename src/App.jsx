@@ -1,7 +1,7 @@
-import Register from './pages/Register';
+import Product from './pages/Product';
 
 const App = () => {
-  return <Register />;
+  return <Product />;
 };
 
 export default App;
