@@ -44,7 +44,7 @@ router.delete('/:id', verifyTokenAdmin, async (req, res) => {
 // Get User Order
 router.get('/find/:userid', verifyTokenAuth, async (req, res) => {
   try {
-    const orders = await Order.findOne({ userId: req.params.userid });
+    const orders = await Order.find({ userId: req.params.userid });
     res.status(200).json(orders);
   } catch (err) {
     res.status(500).json(err);
