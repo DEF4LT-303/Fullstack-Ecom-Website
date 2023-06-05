@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
@@ -39,6 +41,19 @@ const Option = styled.option`
 `;
 
 function ProductList() {
+  const location = useLocation();
+  const cat = location.pathname.split('/')[2];
+  const [filters, setFilter] = useState({});
+  const [sort, setSort] = useState('newest');
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilter({
+      ...filters, // spread operator - if there are multiple filters
+      [e.target.name]: value
+    });
+  };
+
   return (
     <Container>
       <Announcement />
@@ -47,10 +62,8 @@ function ProductList() {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Content:</FilterText>
-          <Select>
-            <Option disabled selected>
-              Type
-            </Option>
+          <Select name='type' onChange={handleFilters}>
+            <Option>Type</Option>
             <Option>Gift Cards</Option>
             <Option>Games</Option>
             <Option>Subscriptions</Option>
@@ -58,16 +71,14 @@ function ProductList() {
         </Filter>
         <Filter>
           <FilterText>Sort Content:</FilterText>
-          <Select>
-            <Option disabled selected>
-              Price
-            </Option>
-            <Option>High - Low</Option>
-            <Option>Low - High</Option>
+          <Select onChange={(e) => setSort(e.target.value)}>
+            <Option>Price</Option>
+            <Option value='desc'>High - Low</Option>
+            <Option value='asc'>Low - High</Option>
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      <Products cat={cat} filters={filters} sort={sort} />
       <Footer />
     </Container>
   );
