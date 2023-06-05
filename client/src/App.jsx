@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-// import Cart from './pages/Cart';
+import Cart from './pages/Cart';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Product from './pages/Product';
@@ -20,9 +20,9 @@ const App = () => {
       <Routes>
         <Route path='/product/:id' element={<Product />} />
       </Routes>
-      {/* <Routes>
+      <Routes>
         <Route path='/cart' element={<Cart />} />
-      </Routes> */}
+      </Routes>
       <Routes>
         <Route path='/login' element={<Login />} />
       </Routes>
