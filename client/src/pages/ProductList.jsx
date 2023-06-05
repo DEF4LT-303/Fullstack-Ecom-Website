@@ -48,6 +48,7 @@ function ProductList() {
 
   const handleFilters = (e) => {
     const value = e.target.value;
+
     setFilter({
       ...filters, // spread operator - if there are multiple filters
       [e.target.name]: value
@@ -62,8 +63,8 @@ function ProductList() {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Content:</FilterText>
-          <Select onChange={handleFilters}>
-            <Option>Type</Option>
+          <Select name='type' onChange={handleFilters}>
+            <Option disabled>Type</Option>
             <Option>Gift Cards</Option>
             <Option>Games</Option>
             <Option>Subscriptions</Option>
@@ -72,7 +73,7 @@ function ProductList() {
         <Filter>
           <FilterText>Sort Content:</FilterText>
           <Select onChange={(e) => setSort(e.target.value)}>
-            <Option>Price</Option>
+            <Option disabled>Price</Option>
             <Option value='desc'>High - Low</Option>
             <Option value='asc'>Low - High</Option>
           </Select>

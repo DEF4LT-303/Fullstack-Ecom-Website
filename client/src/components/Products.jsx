@@ -17,14 +17,14 @@ const Products = ({ cat, filters, sort }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        console.log(cat);
+        // console.log(cat);
         const res = await axios.get(
           cat
             ? `http://localhost:5000/api/products?category=${cat}` // if cat is not null, then fetch products with category
             : 'http://localhost:5000/api/products'
         );
         setProducts(res.data); // set products to the response data after filtering
-        console.log(res);
+        // console.log(res);
       } catch (err) {}
     };
     fetchProducts();
