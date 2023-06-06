@@ -1,8 +1,11 @@
 import { Add, Remove } from '@material-ui/icons';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { publicRequest } from '../requestMethod';
 import { mobile } from '../responsive';
 
 const Container = styled.div``;
@@ -65,7 +68,7 @@ const FilterSize = styled.select`
   padding: 5px;
 `;
 
-const FilterSizeOption = styled.option``;
+const FilterOption = styled.option``;
 
 const AddContainer = styled.div`
   display: flex;
@@ -105,27 +108,44 @@ const Button = styled.button`
 `;
 
 function Product() {
+  const location = useLocation();
+  const id = location.pathname.split('/')[2];
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await publicRequest.get('/products/find/' + id);
+        setProduct(res.data);
+      } catch (err) {}
+    };
+    fetchProduct();
+  }, [id]);
+
+  console.log(product);
+  // product.options.map((option) => console.log(option));
+
   return (
     <Container>
       <Announcement />
       <Navbar />
       <Wrapper>
         <ImageContainer>
-          <Image src='https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg' />
+          <Image src={product.img} />
         </ImageContainer>
         <InfoContainer>
-          <Title>Steam Wallet</Title>
-          <Desc>Redeem Steam wallet code</Desc>
-          <Price>TK. 115 - TK. 4680</Price>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>{product.price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Amount</FilterTitle>
               <FilterSize>
-                <FilterSizeOption>$1</FilterSizeOption>
-                <FilterSizeOption>$5</FilterSizeOption>
-                <FilterSizeOption>$10</FilterSizeOption>
-                <FilterSizeOption>$20</FilterSizeOption>
-                <FilterSizeOption>$50</FilterSizeOption>
+                {product.options &&
+                  product.options.map((option) => (
+                    <FilterOption key={option}>{option}</FilterOption>
+                  ))}
               </FilterSize>
             </Filter>
           </FilterContainer>

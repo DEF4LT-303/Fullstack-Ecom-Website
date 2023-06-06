@@ -20,6 +20,9 @@ const ProductsSchema = new mongoose.Schema(
     type: {
       type: String
     },
+    options: {
+      type: Array
+    },
     amount: {
       type: Number
     },

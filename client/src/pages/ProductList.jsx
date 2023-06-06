@@ -59,7 +59,7 @@ function ProductList() {
     <Container>
       <Announcement />
       <Navbar />
-      <Title>Games</Title>
+      <Title>{cat.toLocaleUpperCase()}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Content:</FilterText>
