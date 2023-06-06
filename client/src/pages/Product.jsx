@@ -112,6 +112,7 @@ function Product() {
   const id = location.pathname.split('/')[2];
 
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -123,8 +124,13 @@ function Product() {
     fetchProduct();
   }, [id]);
 
-  console.log(product);
-  // product.options.map((option) => console.log(option));
+  const handleQuantity = (type) => {
+    if (type === 'dec') {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
 
   return (
     <Container>
@@ -137,23 +143,24 @@ function Product() {
         <InfoContainer>
           <Title>{product.title}</Title>
           <Desc>{product.desc}</Desc>
-          <Price>{product.price}</Price>
+          <Price>TK. {product.price}</Price>
           <FilterContainer>
-            <Filter>
-              <FilterTitle>Amount</FilterTitle>
-              <FilterSize>
-                {product.options &&
-                  product.options.map((option) => (
+            {product.options && product.options.length > 0 && (
+              <Filter>
+                <FilterTitle>Options</FilterTitle>
+                <FilterSize>
+                  {product.options.map((option) => (
                     <FilterOption key={option}>{option}</FilterOption>
                   ))}
-              </FilterSize>
-            </Filter>
+                </FilterSize>
+              </Filter>
+            )}
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick={() => handleQuantity('dec')} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity('inc')} />
             </AmountContainer>
             <Button>ADD TO CART</Button>
           </AddContainer>
