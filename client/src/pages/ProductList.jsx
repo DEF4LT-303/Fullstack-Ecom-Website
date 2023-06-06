@@ -65,7 +65,7 @@ function ProductList() {
           <FilterText>Filter Content:</FilterText>
           <Select name='type' onChange={handleFilters}>
             <Option disabled>Type</Option>
-            <Option>Gift Cards</Option>
+            <Option>Top Ups</Option>
             <Option>Games</Option>
             <Option>Subscriptions</Option>
           </Select>

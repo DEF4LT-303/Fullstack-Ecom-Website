@@ -27,7 +27,7 @@ export const categories = [
     id: 2,
     img: 'https://cdn.mos.cms.futurecdn.net/zNZFfpcJcCPdtPHQTQyqei-1200-80.jpg',
     title: 'WALLET CODES',
-    cat: 'wallet'
+    cat: 'code'
   },
   {
     id: 3,
