@@ -1,7 +1,9 @@
 import { Add, Remove } from '@material-ui/icons';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { addProduct } from '../Redux/cartRedux';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -114,6 +116,8 @@ function Product() {
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -130,6 +134,10 @@ function Product() {
     } else {
       setQuantity(quantity + 1);
     }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...product, quantity }));
   };
 
   return (
@@ -162,7 +170,7 @@ function Product() {
               <Amount>{quantity}</Amount>
               <Add onClick={() => handleQuantity('inc')} />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
