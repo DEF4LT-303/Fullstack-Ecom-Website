@@ -18,7 +18,7 @@ const ProductsSchema = new mongoose.Schema(
       type: Array
     },
     type: {
-      type: String
+      type: Array
     },
     options: {
       type: Array

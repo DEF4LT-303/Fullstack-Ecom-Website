@@ -63,12 +63,28 @@ function ProductList() {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Content:</FilterText>
-          <Select name='type' onChange={handleFilters}>
-            <Option disabled>Type</Option>
-            <Option>Top Ups</Option>
-            <Option>Games</Option>
-            <Option>Subscriptions</Option>
-          </Select>
+          {cat === 'subscriptions' && (
+            <Select name='type' onChange={handleFilters}>
+              <Option>All</Option>
+              <Option>Genshin</Option>
+              <Option>Discord</Option>
+            </Select>
+          )}
+          {cat === 'codes' && (
+            <Select name='type' onChange={handleFilters}>
+              <Option>All</Option>
+              <Option>Genshin</Option>
+              <Option>Steam</Option>
+              <Option>Valorant</Option>
+            </Select>
+          )}
+          {cat === 'games' && (
+            <Select name='type' onChange={handleFilters}>
+              <Option>All</Option>
+              <Option>Online</Option>
+              <Option>Offline</Option>
+            </Select>
+          )}
         </Filter>
         <Filter>
           <FilterText>Sort Content:</FilterText>

@@ -20,14 +20,14 @@ export const categories = [
   {
     id: 1,
     img: 'https://www.spieltimes.com/wp-content/uploads/2022/01/Genshin-Primogem-Budgeting-Guide.jpg',
-    title: 'GENSHIN TOP UPS',
-    cat: 'topup'
+    title: 'Subscriptions',
+    cat: 'subscriptions'
   },
   {
     id: 2,
     img: 'https://cdn.mos.cms.futurecdn.net/zNZFfpcJcCPdtPHQTQyqei-1200-80.jpg',
     title: 'WALLET CODES',
-    cat: 'code'
+    cat: 'codes'
   },
   {
     id: 3,
