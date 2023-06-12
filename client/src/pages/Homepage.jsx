@@ -18,6 +18,39 @@ const DivTitles = styled.h1`
   ${mobile({ fontSize: '2rem' })}
 `;
 
+const SectionWithBackground = styled.section`
+  position: relative;
+  background: url('https://rare-gallery.com/mocahbig/397692-wallpaper-yoru-valorant-characters-4k-hd.jpg')
+    no-repeat fixed center center;
+  background-size: cover;
+  min-height: 400px;
+  margin-left: 23px;
+  margin-right: 23px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Button = styled.button`
+  padding: 18px 34px;
+  background-color: #0f379a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #faf9f6;
+    color: #000000;
+    transform: scale(1.1);
+  }
+`;
+
 const Home = () => {
   return (
     <div>
@@ -28,6 +61,9 @@ const Home = () => {
       <Catagories />
       <DivTitles>Best Sellers</DivTitles>
       <Products />
+      <SectionWithBackground>
+        <Button>BUY VP</Button>
+      </SectionWithBackground>
       <Footer />
     </div>
   );
