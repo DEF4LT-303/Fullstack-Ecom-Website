@@ -1,4 +1,7 @@
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { login } from '../Redux/apiCalls';
 import { mobile } from '../responsive';
 
 const Container = styled.div`
@@ -47,6 +50,15 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  &:disabled {
+    background-color: #cccccc;
+    color: #555555;
+    cursor: not-allowed;
+  }
+`;
+
+const Error = styled.span`
+  color: red;
 `;
 
 const Link = styled.a`
@@ -57,14 +69,35 @@ const Link = styled.a`
 `;
 
 function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    login(dispatch, { username, password });
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
-          <Input placeholder='username' />
-          <Input placeholder='password' />
-          <Button>LOG IN</Button>
+          <Input
+            placeholder='username'
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            placeholder='password'
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button onClick={handleClick} disabled={isFetching}>
+            LOG IN
+          </Button>
+          {error && <Error>Something went wrong...</Error>}
           <Link>Forgot password?</Link>
           <Link>Create an account</Link>
         </Form>
