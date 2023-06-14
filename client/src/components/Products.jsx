@@ -17,14 +17,12 @@ const Products = ({ cat, filters, sort }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // console.log(cat);
         const res = await publicRequest.get(
           cat
             ? `/products?category=${cat}` // if cat is not null, then fetch products with category
             : '/products'
         );
         setProducts(res.data); // set products to the response data after filtering
-        console.log(res);
       } catch (err) {}
     };
     fetchProducts();
