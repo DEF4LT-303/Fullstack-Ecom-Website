@@ -80,8 +80,6 @@ const Home = () => {
       <Catagories />
       <DivTitles className='best-sellers'>Best Sellers</DivTitles>
       <Products />
-
-      <Products />
       <SectionWithBackground>
         <Button>BUY VP</Button>
       </SectionWithBackground>
