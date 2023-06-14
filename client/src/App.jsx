@@ -16,7 +16,7 @@ import Register from './pages/Register';
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
-  console.log(user);
+
   // const user = true;
 
   return (
