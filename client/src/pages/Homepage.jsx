@@ -9,13 +9,32 @@ import Slider from '../components/Slider';
 import { mobile } from '../responsive';
 
 const DivTitles = styled.h1`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
   font-size: 4rem;
   font-weight: 300;
   text-align: center;
   margin-top: 70px;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   ${mobile({ fontSize: '2rem' })}
+
+  &.categories {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* font-family: 'Bebas Neue', sans-serif; */
+    color: #333;
+  }
+
+  &.best-sellers {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* font-family: 'Bebas Neue', sans-serif; */
+    color: #333;
+  }
 `;
 
 const SectionWithBackground = styled.section`
@@ -57,9 +76,11 @@ const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
-      <DivTitles>Catagories</DivTitles>
+      <DivTitles className='categories'>Categories</DivTitles>
       <Catagories />
-      <DivTitles>Best Sellers</DivTitles>
+      <DivTitles className='best-sellers'>Best Sellers</DivTitles>
+      <Products />
+
       <Products />
       <SectionWithBackground>
         <Button>BUY VP</Button>

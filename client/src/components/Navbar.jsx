@@ -70,7 +70,7 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: '12px', marginLeft: '10px' })}
 `;
 
-const LogoLink = styled(Link)`
+const NavLink = styled(Link)`
   text-decoration: none;
   color: #333; /* Custom color for the link */
   &:visited {
@@ -99,20 +99,24 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <LogoLink to='/'>
+          <NavLink to='/'>
             <Logo>MERN E-com site</Logo>
-          </LogoLink>
+          </NavLink>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Log In</MenuItem>
-          <Link to='/cart'>
+          <NavLink to='/register'>
+            <MenuItem>Register</MenuItem>
+          </NavLink>
+          <NavLink to='/login'>
+            <MenuItem>Log In</MenuItem>
+          </NavLink>
+          <NavLink to='/cart'>
             <MenuItem>
               <Badge badgeContent={quantity} color='primary'>
                 <ShoppingCartOutlined />
               </Badge>
             </MenuItem>
-          </Link>
+          </NavLink>
         </Right>
       </Wrapper>
     </Container>
