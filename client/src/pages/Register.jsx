@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 
@@ -54,23 +55,94 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const ErrorMessage = styled.div`
+  color: red;
+  margin-bottom: 10px;
+`;
+
 function Register() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState([]);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    // Validate form fields
+    const validationErrors = {};
+    if (firstName.trim() === '') {
+      validationErrors.firstName = 'First name cannot be empty';
+    }
+    if (lastName.trim() === '') {
+      validationErrors.lastName = 'Last name cannot be empty';
+    }
+    if (username.trim() === '') {
+      validationErrors.username = 'Username cannot be empty';
+    }
+    if (email.trim() === '') {
+      validationErrors.email = 'Email cannot be empty';
+    }
+    if (password.trim() === '') {
+      validationErrors.password = 'Password cannot be empty';
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      // Set the validation errors
+      setErrors(validationErrors);
+      return;
+    }
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input placeholder='first name' />
-          <Input placeholder='last name' />
-          <Input placeholder='username' />
-          <Input placeholder='email' />
-          <Input placeholder='password' />
-          <Input placeholder='confirm password' />
+          <Input
+            placeholder='first name'
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            style={errors.firstName && { border: '1px solid red' }}
+          />
+
+          <Input
+            placeholder='last name'
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            style={errors.lastName && { border: '1px solid red' }}
+          />
+
+          <Input
+            placeholder='username'
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            style={errors.username && { border: '1px solid red' }}
+          />
+
+          <Input
+            placeholder='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={errors.email && { border: '1px solid red' }}
+          />
+
+          <Input
+            placeholder='password'
+            type='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={errors.password && { border: '1px solid red' }}
+          />
+          {errors && <ErrorMessage>All fields are required!</ErrorMessage>}
+
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <Button onClick={handleRegister}>CREATE</Button>
         </Form>
       </Wrapper>
     </Container>
