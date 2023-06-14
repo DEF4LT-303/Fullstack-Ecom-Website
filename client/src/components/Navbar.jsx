@@ -1,7 +1,10 @@
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { logout } from '../Redux/userRedux';
 import { mobile } from '../responsive';
 
 const Container = styled.div`
@@ -68,7 +71,28 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: '12px', marginLeft: '10px' })}
 `;
 
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: #333; /* Custom color for the link */
+  &:visited {
+    color: #333; /* Custom color for visited link */
+  }
+  &:hover,
+  &:active {
+    color: #333; /* Custom color for link on hover and active state */
+  }
+`;
+
 const Navbar = () => {
+  const user = useSelector((state) => state.user.currentUser);
+  const quantity = useSelector((state) => state.cart.quantity);
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -83,16 +107,32 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>MERN E-com site</Logo>
+          <NavLink to='/'>
+            <Logo>MERN E-com site</Logo>
+          </NavLink>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Log In</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color='primary'>
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          {user ? (
+            <>
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </>
+          ) : (
+            <>
+              <NavLink to='/register'>
+                <MenuItem>Register</MenuItem>
+              </NavLink>
+              <NavLink to='/login'>
+                <MenuItem>Log In</MenuItem>
+              </NavLink>
+            </>
+          )}
+          <NavLink to='/cart'>
+            <MenuItem>
+              <Badge badgeContent={quantity} color='primary'>
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
+          </NavLink>
         </Right>
       </Wrapper>
     </Container>

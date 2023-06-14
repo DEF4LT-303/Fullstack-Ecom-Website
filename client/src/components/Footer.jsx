@@ -137,7 +137,7 @@ function Footer() {
         </List>
         <Payment src='https://logos-download.com/wp-content/uploads/2022/01/BKash_Logo-700x287.png' />
         <Payment src='https://www.logo.wine/a/logo/Nagad/Nagad-Horizontal-Logo.wine.svg' />
-        <Payment src='https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png' />
+        {/* <Payment src='https://assets.stickpng.com/images/58482363cef1014c0b5e49c1.png' /> */}
       </Right>
     </Container>
   );

@@ -10,6 +10,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 const Info = styled.div`
   opacity: 0;
@@ -123,7 +124,9 @@ const Product = ({ item }) => {
               <ShoppingCartOutlined />
             </IconContainer>
             <IconContainer>
-              <SearchOutlined />
+              <Link to={`/product/${item._id}`}>
+                <SearchOutlined />
+              </Link>
             </IconContainer>
             <IconContainer>
               <FavoriteBorderOutlined />

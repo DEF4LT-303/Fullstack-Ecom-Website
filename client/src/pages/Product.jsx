@@ -1,8 +1,13 @@
 import { Add, Remove } from '@material-ui/icons';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { addProduct } from '../Redux/cartRedux';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { publicRequest } from '../requestMethod';
 import { mobile } from '../responsive';
 
 const Container = styled.div``;
@@ -65,7 +70,7 @@ const FilterSize = styled.select`
   padding: 5px;
 `;
 
-const FilterSizeOption = styled.option``;
+const FilterOption = styled.option``;
 
 const AddContainer = styled.div`
   display: flex;
@@ -105,37 +110,67 @@ const Button = styled.button`
 `;
 
 function Product() {
+  const location = useLocation();
+  const id = location.pathname.split('/')[2];
+
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await publicRequest.get('/products/find/' + id);
+        setProduct(res.data);
+      } catch (err) {}
+    };
+    fetchProduct();
+  }, [id]);
+
+  const handleQuantity = (type) => {
+    if (type === 'dec') {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...product, quantity }));
+  };
+
   return (
     <Container>
       <Announcement />
       <Navbar />
       <Wrapper>
         <ImageContainer>
-          <Image src='https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg' />
+          <Image src={product.img} />
         </ImageContainer>
         <InfoContainer>
-          <Title>Steam Wallet</Title>
-          <Desc>Redeem Steam wallet code</Desc>
-          <Price>TK. 115 - TK. 4680</Price>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>TK. {product.price}</Price>
           <FilterContainer>
-            <Filter>
-              <FilterTitle>Amount</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>$1</FilterSizeOption>
-                <FilterSizeOption>$5</FilterSizeOption>
-                <FilterSizeOption>$10</FilterSizeOption>
-                <FilterSizeOption>$20</FilterSizeOption>
-                <FilterSizeOption>$50</FilterSizeOption>
-              </FilterSize>
-            </Filter>
+            {product.options && product.options.length > 0 && (
+              <Filter>
+                <FilterTitle>Options</FilterTitle>
+                <FilterSize>
+                  {product.options.map((option) => (
+                    <FilterOption key={option}>{option}</FilterOption>
+                  ))}
+                </FilterSize>
+              </Filter>
+            )}
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick={() => handleQuantity('dec')} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity('inc')} />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

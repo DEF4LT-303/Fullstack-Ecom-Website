@@ -5,8 +5,7 @@ export const sliderItems = [
     caption: 'Valorant Points'
   },
   {
-    image:
-      'https://cdn1.codashop.com/S/content/common/images/mno/steam_640x241.png',
+    image: 'https://pcstrike.com/wp-content/uploads/2021/03/Steam-Banner.jpg',
     caption: 'Steam Top Ups'
   },
   {
@@ -20,17 +19,20 @@ export const categories = [
   {
     id: 1,
     img: 'https://www.spieltimes.com/wp-content/uploads/2022/01/Genshin-Primogem-Budgeting-Guide.jpg',
-    title: 'GENSHIN TOP UPS'
+    title: 'Subscriptions',
+    cat: 'subscriptions'
   },
   {
     id: 2,
     img: 'https://cdn.mos.cms.futurecdn.net/zNZFfpcJcCPdtPHQTQyqei-1200-80.jpg',
-    title: 'WALLET CODES'
+    title: 'WALLET CODES',
+    cat: 'codes'
   },
   {
     id: 3,
     img: 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
-    title: 'GAMES'
+    title: 'GAMES',
+    cat: 'games'
   }
 ];
 

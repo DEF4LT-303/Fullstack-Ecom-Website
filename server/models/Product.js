@@ -17,13 +17,20 @@ const ProductsSchema = new mongoose.Schema(
     category: {
       type: Array
     },
+    type: {
+      type: Array
+    },
+    options: {
+      type: Array
+    },
     amount: {
       type: Number
     },
     price: {
       type: Number,
       required: true
-    }
+    },
+    inStock: { type: Boolean, default: true }
   },
   { timestamps: true }
 );
